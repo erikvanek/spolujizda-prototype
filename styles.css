@@ -72,7 +72,7 @@ button { cursor: pointer; }
 .topbar-note, .footer { color: var(--muted); font-size: 12px; letter-spacing: .04em; }
 
 main { flex: 1; }
-.screen { display: none; padding: 76px 0 80px; animation: appear .35s ease; }
+.screen { display: none; opacity: 1; padding: 76px 0 80px; animation: appear .35s ease both; }
 .screen.active { display: block; }
 
 @keyframes appear { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
