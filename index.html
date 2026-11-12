@@ -14,6 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -70,7 +75,7 @@
                 </span>
                 <span class="chevron">⌄</span>
               </button>
-              <button class="button button-primary" type="submit">
+              <button class="button button-primary waves-effect waves-light" type="submit">
                 Hledat jízdy <span>→</span>
               </button>
             </div>
@@ -104,7 +109,7 @@
 
         <section class="screen" id="results-screen" aria-labelledby="results-title">
           <div class="screen-heading">
-            <button class="back-button" data-screen="search">←</button>
+            <button class="back-button z-depth-1" data-screen="search">←</button>
             <div>
               <p class="eyebrow">02 / dostupné jízdy</p>
               <h2 id="results-title">Vyber si svou jízdu</h2>
@@ -124,7 +129,7 @@
 
         <section class="screen" id="detail-screen" aria-labelledby="detail-title">
           <div class="screen-heading detail-heading">
-            <button class="back-button" data-screen="results">←</button>
+            <button class="back-button z-depth-1" data-screen="results">←</button>
             <div>
               <p class="eyebrow">03 / detail jízdy</p>
               <h2 id="detail-title">Tohle by mohlo sedět</h2>
@@ -135,7 +140,7 @@
 
         <section class="screen" id="order-screen" aria-labelledby="order-title">
           <div class="screen-heading detail-heading">
-            <button class="back-button" data-screen="results">←</button>
+            <button class="back-button z-depth-1" data-screen="results">←</button>
             <div>
               <p class="eyebrow">04 / rezervace místa</p>
               <h2 id="order-title">Už jen krůček</h2>
@@ -150,7 +155,7 @@
                 Tvoje místo čeká. Na e-mail ti pošleme kontakt na řidiče a instrukce k vyzvednutí.
               </p>
               <div class="order-total"><span>Celkem</span><strong id="order-total">€25</strong></div>
-              <button class="button button-primary full" id="pay-button">
+              <button class="button button-primary full waves-effect waves-light" id="pay-button">
                 Pokračovat k platbě <span>→</span>
               </button>
               <button class="text-button full" data-screen="search">Začít nové hledání</button>
@@ -175,6 +180,7 @@
     </div>
 
     <div class="toast" id="toast" role="status"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
