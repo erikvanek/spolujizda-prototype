@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>spolujízda — share the ride</title>
+    <title>spolujízda — sdílej cestu</title>
     <meta
       name="description"
-      content="A friendly ride-sharing prototype for finding and booking rides."
+      content="Jednoduchý prototyp pro hledání a objednávání spolujízd."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,37 +23,37 @@
           <span class="brand-mark">↗</span>
           <span>spolujízda</span>
         </button>
-        <span class="topbar-note">simple rides, better journeys</span>
+        <span class="topbar-note">jednodušší cesta, lepší jízda</span>
       </header>
 
       <main>
         <section class="screen active" id="search-screen" aria-labelledby="search-title">
           <div class="hero-copy">
-            <p class="eyebrow">01 / find your ride</p>
-            <h1 id="search-title">Where are you<br /><em>headed?</em></h1>
+            <p class="eyebrow">01 / najdi svou jízdu</p>
+            <h1 id="search-title">Kam dnes<br /><em>jedeš?</em></h1>
             <p class="lede">
-              Find a seat, meet a new person, and make the journey a little lighter.
+              Najdi volné místo, poznej nové lidi a udělej cestu o něco příjemnější.
             </p>
           </div>
 
           <form class="search-card" id="search-form">
             <div class="field-grid">
               <label class="field">
-                <span>From</span>
+                <span>Odkud</span>
                 <span class="input-wrap">
                   <span class="field-icon">⌖</span>
-                  <input id="from" name="from" placeholder="e.g. Brno" required />
+                  <input id="from" name="from" placeholder="např. Brno" required />
                 </span>
               </label>
               <label class="field">
-                <span>To</span>
+                <span>Kam</span>
                 <span class="input-wrap">
                   <span class="field-icon">⌖</span>
-                  <input id="to" name="to" placeholder="e.g. Vienna" required />
+                  <input id="to" name="to" placeholder="např. Vídeň" required />
                 </span>
               </label>
               <label class="field">
-                <span>When</span>
+                <span>Kdy</span>
                 <span class="input-wrap">
                   <span class="field-icon">◷</span>
                   <input id="when" name="when" type="datetime-local" required />
@@ -65,63 +65,58 @@
               <button class="extras-trigger" type="button" id="extras-trigger">
                 <span class="plus">+</span>
                 <span>
-                  <strong>Add extras</strong>
-                  <small id="extras-summary">Dogs, heavy bags, bikes...</small>
+                  <strong>Přidat věci navíc</strong>
+                  <small id="extras-summary">Pes, těžké zavazadlo, kolo…</small>
                 </span>
                 <span class="chevron">⌄</span>
               </button>
               <button class="button button-primary" type="submit">
-                Search rides <span>→</span>
+                Hledat jízdy <span>→</span>
               </button>
             </div>
 
             <div class="extras-panel" id="extras-panel" hidden>
-              <p class="panel-label">Anything coming along?</p>
+              <p class="panel-label">Co bereš s sebou?</p>
               <div class="extras-list">
                 <label class="extra-option">
-                  <input type="checkbox" name="extras" value="Dog" />
+                  <input type="checkbox" name="extras" value="Pes" />
                   <span class="extra-emoji">🐕</span>
-                  <span><strong>Dog</strong><small>They’re welcome aboard</small></span>
+                  <span><strong>Pes</strong><small>Čtyřnozí parťáci jsou vítáni</small></span>
                   <span class="checkbox"></span>
                 </label>
                 <label class="extra-option">
-                  <input type="checkbox" name="extras" value="Heavy bag" />
+                  <input type="checkbox" name="extras" value="Těžké zavazadlo" />
                   <span class="extra-emoji">🧳</span>
-                  <span><strong>Heavy bag</strong><small>A little extra luggage</small></span>
+                  <span><strong>Těžké zavazadlo</strong><small>Trochu větší náklad</small></span>
                   <span class="checkbox"></span>
                 </label>
                 <label class="extra-option">
-                  <input type="checkbox" name="extras" value="Bike" />
+                  <input type="checkbox" name="extras" value="Kolo" />
                   <span class="extra-emoji">🚲</span>
-                  <span><strong>Bike</strong><small>Room for two wheels</small></span>
+                  <span><strong>Kolo</strong><small>Místo pro dvě kola</small></span>
                   <span class="checkbox"></span>
                 </label>
               </div>
             </div>
           </form>
 
-          <div class="trust-row">
-            <span>✦</span> Verified drivers
-            <span>✦</span> Clear prices
-            <span>✦</span> No hidden fees
-          </div>
         </section>
 
         <section class="screen" id="results-screen" aria-labelledby="results-title">
           <div class="screen-heading">
             <button class="back-button" data-screen="search">←</button>
             <div>
-              <p class="eyebrow">02 / available rides</p>
-              <h2 id="results-title">Your next ride</h2>
+              <p class="eyebrow">02 / dostupné jízdy</p>
+              <h2 id="results-title">Vyber si svou jízdu</h2>
               <p class="route-summary" id="route-summary"></p>
             </div>
-            <button class="edit-search" data-screen="search">Edit search</button>
+            <button class="edit-search" data-screen="search">Upravit hledání</button>
           </div>
 
           <div class="results-layout">
             <div class="results-meta">
-              <span id="results-count">3 rides found</span>
-              <button class="sort-button">Soonest first <span>⌄</span></button>
+              <span id="results-count">3 jízdy</span>
+              <button class="sort-button">Nejdříve odjíždí <span>⌄</span></button>
             </div>
             <div class="ride-list" id="ride-list"></div>
           </div>
@@ -131,8 +126,8 @@
           <div class="screen-heading detail-heading">
             <button class="back-button" data-screen="results">←</button>
             <div>
-              <p class="eyebrow">03 / ride details</p>
-              <h2 id="detail-title">A good match</h2>
+              <p class="eyebrow">03 / detail jízdy</p>
+              <h2 id="detail-title">Tohle by mohlo sedět</h2>
             </div>
           </div>
           <div class="detail-layout" id="detail-content"></div>
@@ -142,24 +137,23 @@
           <div class="screen-heading detail-heading">
             <button class="back-button" data-screen="results">←</button>
             <div>
-              <p class="eyebrow">04 / reserve your seat</p>
-              <h2 id="order-title">Almost there</h2>
+              <p class="eyebrow">04 / rezervace místa</p>
+              <h2 id="order-title">Už jen krůček</h2>
             </div>
           </div>
           <div class="order-layout">
             <div class="order-card">
               <div class="success-badge">✓</div>
-              <p class="eyebrow">Your ride is reserved</p>
+              <p class="eyebrow">Tvoje jízda je rezervovaná</p>
               <h3 id="order-confirmation-title">Brno → Vienna</h3>
               <p class="order-copy">
-                Your seat is waiting. We’ll send the driver’s details and pickup instructions
-                to your email.
+                Tvoje místo čeká. Na e-mail ti pošleme kontakt na řidiče a instrukce k vyzvednutí.
               </p>
-              <div class="order-total"><span>Total</span><strong id="order-total">€25</strong></div>
+              <div class="order-total"><span>Celkem</span><strong id="order-total">€25</strong></div>
               <button class="button button-primary full" id="pay-button">
-                Continue to payment <span>→</span>
+                Pokračovat k platbě <span>→</span>
               </button>
-              <button class="text-button full" data-screen="search">Start a new search</button>
+              <button class="text-button full" data-screen="search">Začít nové hledání</button>
             </div>
             <div class="order-aside">
               <div class="mini-map">
@@ -167,14 +161,14 @@
                 <span class="map-pin pin-a">A</span>
                 <span class="map-pin pin-b">B</span>
               </div>
-              <p><strong>Pickup details</strong><br />You’ll choose your exact pickup spot after payment.</p>
+              <p><strong>Místo vyzvednutí</strong><br />Přesné místo vybereš po zaplacení.</p>
             </div>
           </div>
         </section>
       </main>
 
       <footer class="footer">
-        <span>made for moving together</span>
+        <span>pro cesty, které dávají smysl</span>
         <span class="footer-dot"></span>
         <span>prototype / 2026</span>
       </footer>
